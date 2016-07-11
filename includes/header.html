@@ -1,0 +1,128 @@
+<?php # Script 2.2 - header.html
+//If session is off turn on
+
+if(!isset($_SESSION)){
+
+ session_start();
+
+}
+
+// This page begins the HTML header for the site.
+
+// Check for a $page_title value:
+if (!isset($page_title)) $page_title = 'Default Page Title';
+?><!DOCTYPE HTML>
+<html>
+
+<head>
+  <title><?php echo $page_title; ?></title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" title="style" />
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.gomap-1.3.2.min.js"></script>
+  <style>
+  #map { width:600px; height:400px;background-color:#56ee45;}
+  </style>
+  <script>
+  
+  $(document).ready(function() {
+	  
+	  $('#map').goMap({
+		  markers : [
+		    {
+		      latitude : 28.46,
+		      longitude : -81.38,
+		      title : 'Orlando, FL'
+		    }
+		  ],
+		  zoom : 15,
+		  maptype : 'ROADMAP',
+		  scaleControl : true
+		}); // end goMap
+  }); // end ready
+  
+  </script>
+  
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <h1><a href="index.html">colour<span class="logo_colour">blue</span></a></h1>
+          <h2>Simple. Contemporary. Website Template.</h2>
+        </div>
+      </div>
+      <?php
+       if(isset($_SESSION['usertype']) && ($_SESSION['usertype'] == 'admin')){
+      ?>
+      <div id="menubar">
+        <ul id="menu">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="index.php?p=about" alt="Knowing Us">About</a></li>
+          <li><a href="index.php?p=city" alt="View Zip code in Map">Zip Code</a></li>
+          <li><a href="index.php?p=register" alt="User Registration System">Register</a></li>
+          <li><a href="index.php?p=view" alt="View User Records">View Users</a></li>
+          <li><a href="index.php?p=current" alt="This">Chapters</a></li>
+          <li><a href="index.php?p=contact">Contact</a></li>
+        </ul>
+      </div> 
+      <?php } elseif(isset($_SESSION['usertype']) && ($_SESSION['usertype'] == 'faculty')){ ?>
+      <div id="menubar">
+        <ul id="menu">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="index.php?p=about" alt="Knowing Us">About</a></li>
+          <li><a href="index.php?p=ftdb" alt="Faculty Dash Board">Dash Board</a></li>
+          <li><a href="index.php?p=" alt="Students Score">Students Test's Score</a></li>
+          <li><a href="index.php?p=contact">Contact</a></li>
+        </ul>
+      </div>
+      <?php } elseif(isset($_SESSION['usertype']) && ($_SESSION['usertype'] == 'student')){ ?>
+      <div id="menubar">
+        <ul id="menu">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="index.php?p=about" alt="Knowing Us">About</a></li>
+          <li><a href="index.php?p=stdb" alt="Student Dash Board">Dash Board</a></li>
+          <li><a href="index.php?p=" alt="Students Score">My Scores</a></li>
+          <li><a href="index.php?p=current" alt="This">Chapters</a></li>
+          <li><a href="index.php?p=contact">Contact</a></li>
+        </ul>
+      </div>
+      <?php } else { ?>
+      <div id="menubar">
+        <ul id="menu">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="index.php?p=about" alt="Knowing Us">About</a></li>
+          <li><a href="index.php?p=current" alt="This">Chapters</a></li>
+          <li><a href="index.php?p=contact">Contact</a></li>
+        </ul>
+      </div>
+      <?php } ?>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <h3>Latest News</h3>
+        <h4>New Website Launched</h4>
+        <h5>January 1st, 2010</h5>
+        <p>2010 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">link 1</a></li>
+          <li><a href="#">link 2</a></li>
+        </ul>
+        <h3>Search</h3>
+        <form method="get" action="index.php" id="search_form">
+          <p>
+            <input type="hidden" name="p" value="search" />
+            <input class="search" type="text" name="terms" value="Search..." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="img/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+      </div>
+      <div id="content">
+      <aside><?php if(!isset($_SESSION['username'])){?> Welcome Guest  <a href="index.php?p=register">Sign In</a>|<a href="index.php?p=login">Log In</a>
+ 
+ <?php } else { ?> Welcome <?php echo $_SESSION['username'].' ';?><a href="index.php?p=logout">Log Out</a>
+ <?php } ?></aside>
+	<!-- End of header. -->

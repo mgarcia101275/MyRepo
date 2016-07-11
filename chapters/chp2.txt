@@ -1,0 +1,16 @@
+<h1>Chapter 2</h1>
+<h2> How to think in terms of Objects</h2>
+<p><b> Knowing the difference between interface and implementation</b></p>
+<p><b> The interface and the implementation. </b></p>
+<p><b> Minimal interface</b></p>
+<p><b> Object persistence</b></p>
+<p><b> Standalone application</b></p>
+<p><b> Code Recompilation</b></p>
+<p><b> Using abstract thinking when designing Interfaces</b></p>
+<p><b> Providing the absolute minimal user interface possible</b></p>
+<p><b> Determining the users</b></p>
+<p><b> Object behaviors</b></p>
+<p><b> Environmental Constrains</b></p>
+<p><b> Identifying the public interfaces</b></p>
+<p><b> Identifying the implementation</b></p>
+

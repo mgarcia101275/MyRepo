@@ -1,0 +1,26 @@
+<h1>Chapter 1</h1>
+<h2>Introduction to Object Oriented Programing.</h2>
+<h3>Fundamental Concepts</h3>
+                    <p>The principal book point is to present how the concepts are used in designing Object Oriented Programming. It is important have in mind that when we are talking about Object Oriented Programming have to be present these four features Encapsulation, Inheritance, Polymorphism and Composition. If Encapsulation, Inheritance, Polymorphism and Composition we can’t say that its complete Object Oriented Programming.</p>
+                  <h3> Object and Legacy System</h3>
+                   <p>Object Oriented programming and procedural programming do not compete with each other they are complementary because objects integrate well with structural code. This mean that Object oriented programming does not intend to replace the structural code.</p>
+                   <h3>Data hiding</h3>
+	     <p>Data hiding is the process to restrict the access to attributes (data) and methods (behaviors).</p>
+                  <h3>Moving from procedural to Object Oriented programing</h3>
+	    <p>The procedural programming separate the data from the operators that manipulate that data. In Object Oriented Programming fundamental advantage  is that data and the operators that manipulate the data are  both encapsulate in the object.</p>
+                  <h3>Object, Object Data and Object behavior. </h3>
+	     <p>An object is the building blocks of an Object Oriented program. The data stored into an object represents the state of an object. In Object Oriented programming they are called attributes. Object Behavior is what the object can do in procedural programing the behavior is defined by procedures, functions and subroutines. In Object Oriented programming the behaviors are defined as methods.</p>
+                  <h3>UML Diagrams and Modeling tools</h3>
+                  <p>This diagram is the first modelling classes diagram that you will use after analyze the project’s requirements. The UML contain the name of the class, the attributes and the methods. The visual modeling tools provide the mechanism to manipulate the class diagrams using the Unified Modeling Language (UML).</p>
+<h3>What is exactly a Class. </b></p>
+<p></p>
+<h3>Messages</h3>
+<h3>Interfaces</h3>
+<h3>Implementation</h3>
+<h3>Inheritance.</h3>
+<h3>Is a relationship</h3>
+<h3>Polymorphism</h3>
+<h3>What is a stack</h3>
+<h3>Composition</h3>
+<h3>Abstraction</h3>
+<h3>Has-relationship</h3>
