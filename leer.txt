@@ -1,0 +1,12 @@
+         carga y visualizacion de imagenes:
+--------------------------------------------------
+
+1 crear un formulario html para carga de imagenes.
+        con los campos: descripcion de tipo texto
+                        imagen de tipo file
+        con el metodo post
+        en el action upload_handler.php
+        metodo de encriptacion multipartes
+--------------------------------------------------
+
+2 recibirel array con la informacion de las imagenes
